@@ -1,0 +1,21 @@
+compat: v0
+id: c-lightning
+version: "0.8.1"
+title: "C-Lightning"
+description:
+  short: "A Lightning Node"
+  long: "The lightning node implementation by Blockstream."
+release-notes: https://github.com/ElementsProject/lightning/releases/tag/v0.8.1
+ports:
+  - internal: 9375
+    tor: 9375
+  - internal: 9737
+    tor: 80
+image:
+  type: tar
+mount: /root
+assets:
+  - src: bitcoin.conf.template
+    dst: "."
+    overwrite: true
+hidden-service-version: v2

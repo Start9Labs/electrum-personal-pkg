@@ -1,0 +1,5 @@
+bitcoin:
+    type: object
+    nullable: false
+    name: Bitcoin Settings
+    description: Settings for connecting to Bitcoin Core
