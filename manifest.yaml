@@ -1,21 +1,21 @@
 compat: v0
-id: c-lightning
-version: "0.8.1"
-title: "C-Lightning"
+id: electrum-ps
+version: "0.2.0"
+title: "Electrum Personal Server"
 description:
-  short: "A Lightning Node"
-  long: "The lightning node implementation by Blockstream."
-release-notes: https://github.com/ElementsProject/lightning/releases/tag/v0.8.1
+  short: "Maximally lightweight electrum server for a single user"
+  long: >-
+    Electrum Personal Server aims to make using Electrum bitcoin wallet more secure and more private. It makes it easy
+    to connect your Electrum wallet to your own full node.
+release-notes: https://github.com/chris-belcher/electrum-personal-server/blob/master/release-notes
 ports:
-  - internal: 9375
-    tor: 9375
-  - internal: 9737
-    tor: 80
+  - internal: 50002
+    tor: 50002
 image:
   type: tar
 mount: /root
 assets:
-  - src: bitcoin.conf.template
+  - src: config.ini.template
     dst: "."
     overwrite: true
-hidden-service-version: v2
+hidden-service-version: v3
